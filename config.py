@@ -76,6 +76,16 @@ keys = [
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
 
+    ### my code @@@
+
+    # firefox
+    Key([mod], "f", lazy.spawn("firefox"), desc="to open firefox"),
+
+    # rofi / to managment programs
+    Key([mod], "m", lazy.spawn("rofi -show run"), desc="to open rofi"),
+
+    ### my code ###
+
     Key([mod, "control"], "r", lazy.restart(), desc="Restart Qtile"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(),
