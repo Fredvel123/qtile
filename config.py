@@ -30,6 +30,7 @@ from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
+import os 
 
 mod = "mod4"
 terminal = guess_terminal()
@@ -203,3 +204,15 @@ auto_minimize = True
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
+
+# my code 
+
+autostart = [
+#    "setxkbmap es",
+    "feh --bg-scale Downloads/arch.webp",
+    "picom --no-vsync &",
+#    "nm-applet &",
+]
+
+for x in autostart:
+    os.system(x)
