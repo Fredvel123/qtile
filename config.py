@@ -76,7 +76,7 @@ keys = [
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
 
-    ### my code @@@
+    ### my code ###
 
     # firefox
     Key([mod], "f", lazy.spawn("firefox"), desc="to open firefox"),
@@ -110,7 +110,12 @@ for i in groups:
     ])
 
 layouts = [
-    layout.Columns(border_focus_stack=['#d75f5f', '#8f3d3d'], border_width=4),
+    layout.Columns(
+      border_normal="#222222",  
+      border_focus= "#1481b4",
+      border_width= 1,
+      margin= 4 
+    ),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
